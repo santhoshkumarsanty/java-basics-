@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main 
+{
+     public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter student name: ");
+        String name = sc.nextLine();
+        System.out.print("Enter CGPA: ");
+        double cgpa = sc.nextDouble();
+        System.out.print("Enter number of arrears: ");
+        int arrears = sc.nextInt();
+        if (arrears == 0 && cgpa >= 7.0) 
+        {
+            System.out.println(name + " is Eligible to attend placement");
+        } 
+        else if (arrears <= 2 && cgpa >= 7.5) 
+        {
+            System.out.println(name + " is Eligible to attend placement");
+        } 
+        else 
+        {
+            System.out.println(name + " is Not Eligible to attend placement");
+        }
+    }
+}

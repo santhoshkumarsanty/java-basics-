@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner o=new Scanner(System.in);
+	    int a=o.nextInt();
+	    int b=o.nextInt();
+	    int c=o.nextInt();
+	    int total=a+b+c;
+	    if(total==180&&a>0&&b>0&&c>0){
+	        System.out.println("Triangle is valid");
+	    }
+		else{
+		    System.out.print("Triangle not valid");
+		}
+	}
+}

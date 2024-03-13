@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner o= new Scanner(System.in);
+        System.out.print("----------------Welcome to library-----------------"+"\n");
+        System.out.print("---------------------------------------------------\n");
+        System.out.print("enter no of books taken :");
+        int no_of_books=o.nextInt();
+        System.out.print("enter no of days late to submit :");
+        int no_of_days_late=o.nextInt();
+        if(no_of_days_late>0&&no_of_days_late<5)
+        {
+            System.out.print("no need to pay fine");
+        }
+        else if (no_of_days_late>5&&no_of_days_late<6) 
+        {
+            System.out.print("pay fine rupees:"+(no_of_books*0.5));
+        }
+        else if (no_of_days_late>5&&no_of_days_late<=10) 
+        {
+            System.out.print("pay fine rupees:"+(no_of_books*1));
+        }
+        else if (no_of_days_late>10&&no_of_days_late<30)
+        {
+            System.out.print("pay fine rupees:"+(no_of_books*5));
+        }
+        else if (no_of_days_late>=30)
+        {
+            System.out.print("Sorry your membership has been canceled");
+        }
+
+    }
+}

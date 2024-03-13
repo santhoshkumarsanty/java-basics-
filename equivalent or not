@@ -1,0 +1,16 @@
+import java.util.*;
+public class Main 
+{
+    public static void main(String[] args)
+    { 
+        Scanner o= new Scanner(System.in);
+        int a=o.nextInt(),b=o.nextInt(),c=o.nextInt();
+        if(a==60&&b==60&&c==60)
+        {
+            System.out.print("equivalent triangle");
+        }
+        else{
+            System.out.print("notequivalent triangle");
+        }
+    }
+}

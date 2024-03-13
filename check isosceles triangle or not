@@ -1,0 +1,17 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[]args)
+    {
+        Scanner o=new Scanner(System.in);
+        int a=o.nextInt(),b=o.nextInt(),c=o.nextInt();
+        int total=a+b+c;
+        if (total==180 && a==b||b==c||c==a)
+        {
+            System.out.print("isosceles triangle");
+        }
+        else{
+            System.out.print("not isosceles triangle");
+        }
+    }
+}
