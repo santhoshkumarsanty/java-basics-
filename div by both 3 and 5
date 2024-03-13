@@ -1,0 +1,24 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner o=new Scanner(System.in);
+	    System.out.print("enter minimum range :");
+	    int min =o.nextInt();
+	    System.out.print("enter maximum range :");
+	    int max =o.nextInt();
+
+        int sum=0;
+	    for(int i=min;i<=max;i++)
+	    {
+            if ((i%3==0)&&(i%5==0))
+            {
+                
+                sum=sum+i;
+                System.out.println("sum of value :"+sum+"+"+i);
+
+            }
+	    }
+		System.out.println("total sum between range div by both 3 and 5 :"+sum);
+	}
+}

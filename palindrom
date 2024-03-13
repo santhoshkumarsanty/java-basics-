@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner o=new Scanner(System.in);
+	    
+	    System.out.print("enter the value :");
+	    int num =o.nextInt();
+	    int m=num;
+	    int digit=0;
+	    while(num>0)
+	    {
+	        int a=num%10;
+	        digit=digit*10+a;
+	        num=num/10;
+	        
+	    }
+	    System.out.println(digit);
+        if( m==digit)
+        {
+            System.out.println(m+" is palindrom number");
+        }
+        else
+        {
+            System.out.println(m+" is not palindrom number");
+        }
+	}
+}

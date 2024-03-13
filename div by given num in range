@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner o=new Scanner(System.in);
+	    System.out.print("enter the range value :");
+	    int num =o.nextInt();
+	    System.out.print("enter the division num :");
+	    int div =o.nextInt();
+	    int counta=0,countb=0;
+	    for (int i=1;i<=num;i++)
+	    {
+	        if(i%div==0)
+	        {
+	            counta=counta+i;
+	            System.out.println("counta :"+counta);
+	        }
+	        else
+	        {
+	            countb=countb+i;
+	            System.out.println("countb :"+countb);
+	        }
+	    }
+		System.out.println("total counta value:"+counta);
+		System.out.println("total countb value:"+countb);
+		System.out.println("difference is :"+(counta-countb));
+	}
+}
