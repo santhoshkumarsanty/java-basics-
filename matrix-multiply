@@ -1,0 +1,94 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc =new  Scanner(System.in);
+	    System.out.print("Enter no rows for matrix 1 : ");
+	    int a1=sc.nextInt();
+	    System.out.print("Enter no column for matrix 1 : ");
+	    int b1=sc.nextInt();
+	    System.out.print("Enter no rows for matrix 2 : ");
+	    int a2=sc.nextInt();
+	    System.out.print("Enter no column for matrix 2 : ");
+	    int b2=sc.nextInt();
+	    int arr1[][]=new int[a1][b1];
+	    int arr2[][] =new int [a2][b2];
+	    int arr3[][] = new int [a2][b2];
+	    for (int i=0;i<a1;i++)
+	    {
+	        for(int j=0;j<b1;j++)
+	        {
+	            System.out.print("Enter matrix 1 row "+(i+1)+" column "+(j+1)+" value :");
+	            arr1[i][j]=sc.nextInt();
+	        }
+	    }
+	    for (int i=0;i<a2;i++)
+	    {
+	        for(int j=0;j<b2;j++)
+	        {
+	            System.out.print("Enter matrix 2 row "+(i+1)+" column "+(j+1)+" value :");
+	            arr2[i][j]=sc.nextInt();
+	        }
+	    }
+	    System.out.print('\n');
+	    System.out.println("---------The matrix 1--------");
+	    for( int i=0;i<a1;i++)
+	    {
+    	   if(i<=a1)
+    	   {
+    	       System.out.print('\n');
+    	   }	        
+	        for( int j=0;j<b1;j++)
+	        {
+	            System.out.print(" "+arr1[i][j]);
+	        }
+	    }
+	    System.out.print('\n');
+	    System.out.println("---------The matrix 2--------");
+	    for( int i=0;i<a2;i++)
+	    {
+    	   if(i<=a2)
+    	   {
+    	       System.out.print('\n');
+    	   }	        
+	        for( int j=0;j<b2;j++)
+	        {
+	            System.out.print(" "+arr2[i][j]);
+	        }
+	    }
+	    System.out.print('\n');
+	    System.out.print("---------The matrix answer--------");
+	    if(a1==b2)
+	    {
+    	    for (int i=0;i<a1;i++)
+    	    {
+        	   if(i<=a1)
+        	   {
+        	       System.out.print('\n');
+        	   }
+    	        for(int j=0;j<b2;j++)
+    	        {
+    	            for (int k=0;k<a1;k++)
+    	            {
+    	                arr3[i][j]=arr3[i][j]+arr1[i][k]*arr2[k][j];
+    	            }
+    	            
+    	        }
+    	    } 
+    	    for (int i=0;i<a1;i++)
+    	    {
+        	   if(i<=a1)
+        	   {
+        	       System.out.print('\n');
+        	   }
+    	        for(int j=0;j<b2;j++)
+    	        {
+    	            System.out.print(" "+arr3[i][j]);
+    	        }
+    	    } 
+	    }
+
+	    System.out.print('\n');
+
+	}
+}

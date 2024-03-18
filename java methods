@@ -1,0 +1,34 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner sc =new Scanner(System.in);
+	    int n=sc.nextInt();
+	    int arr[] = new int [n];
+	    int brr[] = new int [n];
+	    int crr[] = new int [100];
+	    for(int i=0;i<n;i++)
+	    {
+	        arr[i]=sc.nextInt();
+	    }
+	    for(int i=0;i<n;i++)
+	    {
+	        brr[i]=sc.nextInt();
+	    }
+	    //copyof method
+	    
+	    /*crr=Arrays.copyOf(arr,n);
+	    for(int i=0;i<n;i++)
+		{
+		    System.out.print(crr[i]+" ");
+	    }*/
+	    
+	    //Equals method
+	    
+	    /*boolean drr=Arrays.equals(arr,brr);
+	    System.out.print(drr);*/
+	    
+	    
+    }
+}

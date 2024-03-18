@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc =new Scanner(System.in);
+	    System.out.print("enter the len of arr          :");
+	    int n=sc.nextInt();
+	    int arr[] =new int [n];
+	    
+	    for(int i=0;i<n;i++)
+	    {
+	        System.out.print("enter the "+(i+1)+" value for  arr    :");
+	        arr[i]=sc.nextInt();
+
+	        
+	    }
+	    int r=sc.nextInt();
+	    for(int i=0;i<r;i++)
+	    {
+            int a =arr[0];
+	        for (int j=0;j<n-1;j++)
+	        {
+	            arr[j]=arr[j+1];
+	        }
+	        arr[n-1]=a;
+	    }
+	    for(int i=0;i<n;i++)
+	    {
+	        System.out.print(arr[i]);
+	    }
+    }
+}

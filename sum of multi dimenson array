@@ -1,0 +1,70 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner sc =new Scanner(System.in);
+	    System.out.print("Enter no rows : ");
+	    int a=sc.nextInt();
+	    System.out.print("Enter no columns : ");
+	    int b=sc.nextInt();
+	    int arr[][]=new int [a][b];
+	    for(int i=0;i<a;i++)
+	    {
+	        for(int j=0;j<b;j++)
+	        {
+	            System.out.print("Enter row "+(i+1)+" column "+(j+1)+" value :");
+	            arr[i][j]=sc.nextInt();
+	        }
+	    }
+	    System.out.print('\n');
+	    System.out.println("---------The matrix--------");
+	    int sum=0;
+	    int d1=0;
+        int d2=0;
+    	for(int i=0;i<a;i++)
+    	    {
+    	        int sum1=0;
+    	        if(i<=a)
+    	        {
+    	            System.out.print('\n');
+    	        }
+                
+    	        for(int j=0;j<b;j++)
+    	        {
+    	            System.out.print(" "+arr[i][j]);
+    	            sum+=arr[i][j];
+    	            
+        	            if(i<a){
+        	                sum1+=arr[i][j];
+        	            }
+        	       if(a==b)
+        	       {
+        	            if (i==j)
+        	            {
+        	                d1+=arr[i][j];
+        	            }
+        	            if((i+j)==(a-1))
+        	            {
+        	                d2+=arr[i][j];
+        	            }
+        	       }
+    	        }
+    	        System.out.print("     The sum of matrix elements is : "+sum1);
+    	    }
+    	    
+    	    System.out.println("\n");
+    	    System.out.print("The Total sum of matrix elements is : "+sum);
+    	    
+    	    System.out.println("\n");
+    	    if (a!=b)
+    	    {
+    	        System.out.println("Sorry the matrix is not Symmetric ");
+    	    }
+    	    System.out.println("\n");
+    	    System.out.println("The sum of left diagonal value is : "+d1);
+    	    System.out.println("The sum of right diagonal value is : "+d2);
+    	    System.out.println("The sum of total diagonal value is : "+(d1+d2));
+    	    
+	}
+}
